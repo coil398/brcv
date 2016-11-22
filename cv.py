@@ -1,6 +1,5 @@
 # import numpy as np
 import cv2
-from brpy import init_brpy
 
 cap = cv2.VideoCapture(1)
 face_cascade = cv2.CascadeClassifier('/usr/local/opt/opencv3/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml')
@@ -8,10 +7,6 @@ face_cascade = cv2.CascadeClassifier('/usr/local/opt/opencv3/share/OpenCV/haarca
 prevFace = False
 font = cv2.FONT_HERSHEY_PLAIN
 font_size = 1
-
-# initialize openbr for python
-br = init_brpy(br_loc='/usr/local/lib')
-br.br_initialize_default()
 
 while(True):
     # フレームをキャプチャする
